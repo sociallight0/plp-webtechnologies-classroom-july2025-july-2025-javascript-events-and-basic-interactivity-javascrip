@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Interactive Web Experience 🎮</h1>
+            <p class="subtitle">Explore JavaScript Event Handling & DOM Manipulation</p>
+        </header>
+
+        <!-- Part 1: Event Handling Demo -->
+        <section class="card">
+            <h2>🎉 Part 1: Event Handling Showcase</h2>
+            
+            <!-- Click Counter -->
+            <div class="interactive-demo">
+                <h3>Click Counter</h3>
+                <p>Current count: <span id="counterDisplay">0</span></p>
+                <div class="button-group">
+                    <button id="incrementBtn" class="btn btn-primary">Increment (+)</button>
+                    <button id="decrementBtn" class="btn btn-secondary">Decrement (-)</button>
+                    <button id="resetBtn" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
+
+            <!-- Hover Effect Demo -->
+            <div class="interactive-demo">
+                <h3>Hover & Mouse Events</h3>
+                <div id="hoverBox" class="hover-box">
+                    <p>Hover over me! 🎨</p>
+                </div>
+                <p id="hoverStatus" class="status-text"></p>
+            </div>
+
+            <!-- Keyboard Event Demo -->
+            <div class="interactive-demo">
+                <h3>Keyboard Events</h3>
+                <input 
+                    type="text" 
+                    id="keyboardInput" 
+                    placeholder="Type something..."
+                    class="input-field"
+                >
+                <p id="keyboardDisplay" class="status-text"></p>
+            </div>
+        </section>
+
+        <!-- Part 2: Interactive Features -->
+        <section class="card">
+            <h2>🎮 Part 2: Interactive Components</h2>
+
+            <!-- Tabbed Interface -->
+            <div class="interactive-demo">
+                <h3>Tabbed Content</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="tab1">About</button>
+                    <button class="tab-btn" data-tab="tab2">Features</button>
+                    <button class="tab-btn" data-tab="tab3">Contact</button>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-panel active">
+                        <h4>About This Project</h4>
+                        <p>This is a comprehensive demonstration of JavaScript event handling and DOM manipulation techniques.</p>
+                    </div>
+                    <div id="tab2" class="tab-panel">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Dynamic event listeners</li>
+                            <li>Real-time form validation</li>
+                            <li>Interactive UI components</li>
+                            <li>Theme switching capability</li>
+                        </ul>
+                    </div>
+                    <div id="tab3" class="tab-panel">
+                        <h4>Get in Touch</h4>
+                        <p>Scroll down to use our contact form with live validation!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collapsible FAQ -->
+            <div class="interactive-demo">
+                <h3>Collapsible FAQ</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is event delegation? <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Event delegation is a technique where you attach a single event listener to a parent element to handle events from multiple child elements efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does form validation work? <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Form validation checks user input against predefined rules using JavaScript, providing immediate feedback before data is submitted to a server.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Why use preventDefault()? <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>preventDefault() stops the default browser behavior, allowing you to handle events with custom JavaScript logic instead.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section class="card">
+            <h2>📋 Part 3: Form Validation</h2>
+            
+            <form id="registrationForm" class="registration-form" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName"
+                        class="input-field"
+                        placeholder="Enter your full name"
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        class="input-field"
+                        placeholder="your.email@example.com"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        class="input-field"
+                        placeholder="(123) 456-7890"
+                    >
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        class="input-field"
+                        placeholder="Create a strong password"
+                    >
+                    <span class="error-message" id="passwordError"></span>
+                    <span class="help-text">Must be 8+ characters with uppercase, lowercase, and number</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword"
+                        class="input-field"
+                        placeholder="Re-enter your password"
+                    >
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age"
+                        class="input-field"
+                        placeholder="Enter your age"
+                        min="13"
+                        max="120"
+                    >
+                    <span class="error-message" id="ageError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms">
+                        I agree to the terms and conditions *
+                    </label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit Registration</button>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <h3>✅ Registration Successful!</h3>
+                <p>Your form has been submitted successfully.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
